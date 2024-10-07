@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct ContentView: View {
+    // Importas el viewmodel con @StateObject
+    @StateObject var viewModel = ViewModel()
+    
     var body: some View {
         VStack {
             Image(systemName: "globe")

@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2509D7272CB380E3008DF692 /* Requirement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2509D7262CB380DC008DF692 /* Requirement.swift */; };
+		2509D72A2CB38289008DF692 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2509D7292CB38289008DF692 /* Repository.swift */; };
+		2509D72D2CB38364008DF692 /* APIRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2509D72C2CB38364008DF692 /* APIRoutes.swift */; };
+		2509D7312CB383E5008DF692 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2509D7302CB383E5008DF692 /* APIService.swift */; };
+		2509D7332CB38492008DF692 /* LocalService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2509D7322CB38488008DF692 /* LocalService.swift */; };
+		2509D7352CB3851B008DF692 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2509D7342CB3851B008DF692 /* ViewModel.swift */; };
+		2509D7372CB38652008DF692 /* CoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2509D7362CB38652008DF692 /* CoordinatorView.swift */; };
+		2509D73A2CB38744008DF692 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2509D7392CB38744008DF692 /* CustomButton.swift */; };
+		2509D73C2CB387BF008DF692 /* TextoLimiteField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2509D73B2CB387BF008DF692 /* TextoLimiteField.swift */; };
+		2509D73E2CB387F2008DF692 /* TextoMultilineField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2509D73D2CB387F2008DF692 /* TextoMultilineField.swift */; };
 		2560465D2CB3743800562190 /* Examen_MovilesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2560465C2CB3743800562190 /* Examen_MovilesApp.swift */; };
 		2560465F2CB3743800562190 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2560465E2CB3743800562190 /* ContentView.swift */; };
 		256046612CB3743900562190 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 256046602CB3743900562190 /* Assets.xcassets */; };
@@ -37,6 +47,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2509D7262CB380DC008DF692 /* Requirement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requirement.swift; sourceTree = "<group>"; };
+		2509D7292CB38289008DF692 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		2509D72C2CB38364008DF692 /* APIRoutes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRoutes.swift; sourceTree = "<group>"; };
+		2509D7302CB383E5008DF692 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		2509D7322CB38488008DF692 /* LocalService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalService.swift; sourceTree = "<group>"; };
+		2509D7342CB3851B008DF692 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		2509D7362CB38652008DF692 /* CoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorView.swift; sourceTree = "<group>"; };
+		2509D7392CB38744008DF692 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		2509D73B2CB387BF008DF692 /* TextoLimiteField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextoLimiteField.swift; sourceTree = "<group>"; };
+		2509D73D2CB387F2008DF692 /* TextoMultilineField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextoMultilineField.swift; sourceTree = "<group>"; };
 		256046592CB3743800562190 /* Examen Moviles.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Examen Moviles.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2560465C2CB3743800562190 /* Examen_MovilesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Examen_MovilesApp.swift; sourceTree = "<group>"; };
 		2560465E2CB3743800562190 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -77,6 +97,48 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2509D7282CB38277008DF692 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				2509D7292CB38289008DF692 /* Repository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		2509D72B2CB38351008DF692 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				2509D72C2CB38364008DF692 /* APIRoutes.swift */,
+			);
+			path = Objects;
+			sourceTree = "<group>";
+		};
+		2509D72E2CB38391008DF692 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				2509D7302CB383E5008DF692 /* APIService.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		2509D72F2CB383AC008DF692 /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				2509D7322CB38488008DF692 /* LocalService.swift */,
+			);
+			path = Local;
+			sourceTree = "<group>";
+		};
+		2509D7382CB38730008DF692 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				2509D7392CB38744008DF692 /* CustomButton.swift */,
+				2509D73B2CB387BF008DF692 /* TextoLimiteField.swift */,
+				2509D73D2CB387F2008DF692 /* TextoMultilineField.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		256046502CB3743800562190 = {
 			isa = PBXGroup;
 			children = (
@@ -101,7 +163,6 @@
 			isa = PBXGroup;
 			children = (
 				2560465C2CB3743800562190 /* Examen_MovilesApp.swift */,
-				2560465E2CB3743800562190 /* ContentView.swift */,
 				256046932CB3762900562190 /* Framework */,
 				256046962CB3764100562190 /* Domain */,
 				256046972CB3765600562190 /* Data */,
@@ -148,6 +209,9 @@
 		256046942CB3763100562190 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				2509D7382CB38730008DF692 /* Components */,
+				2560465E2CB3743800562190 /* ContentView.swift */,
+				2509D7362CB38652008DF692 /* CoordinatorView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -155,6 +219,7 @@
 		256046952CB3763600562190 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				2509D7342CB3851B008DF692 /* ViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -162,6 +227,7 @@
 		256046962CB3764100562190 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				2509D7262CB380DC008DF692 /* Requirement.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -169,6 +235,7 @@
 		256046972CB3765600562190 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				2509D7282CB38277008DF692 /* Repositories */,
 				256046982CB3766000562190 /* Models */,
 			);
 			path = Data;
@@ -177,6 +244,9 @@
 		256046982CB3766000562190 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				2509D72B2CB38351008DF692 /* Objects */,
+				2509D72E2CB38391008DF692 /* Network */,
+				2509D72F2CB383AC008DF692 /* Local */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -270,11 +340,12 @@
 				};
 			};
 			buildConfigurationList = 256046542CB3743800562190 /* Build configuration list for PBXProject "Examen Moviles" */;
-			developmentRegion = en;
+			developmentRegion = "es-419";
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
+				"es-419",
 			);
 			mainGroup = 256046502CB3743800562190;
 			minimizedProjectReferenceProxies = 1;
@@ -326,8 +397,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2509D73A2CB38744008DF692 /* CustomButton.swift in Sources */,
 				2560465F2CB3743800562190 /* ContentView.swift in Sources */,
+				2509D7372CB38652008DF692 /* CoordinatorView.swift in Sources */,
+				2509D72D2CB38364008DF692 /* APIRoutes.swift in Sources */,
+				2509D7272CB380E3008DF692 /* Requirement.swift in Sources */,
 				2560465D2CB3743800562190 /* Examen_MovilesApp.swift in Sources */,
+				2509D7312CB383E5008DF692 /* APIService.swift in Sources */,
+				2509D7332CB38492008DF692 /* LocalService.swift in Sources */,
+				2509D7352CB3851B008DF692 /* ViewModel.swift in Sources */,
+				2509D72A2CB38289008DF692 /* Repository.swift in Sources */,
+				2509D73C2CB387BF008DF692 /* TextoLimiteField.swift in Sources */,
+				2509D73E2CB387F2008DF692 /* TextoMultilineField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
