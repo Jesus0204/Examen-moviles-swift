@@ -19,6 +19,7 @@
 		2509D7402CB432AF008DF692 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2509D73F2CB432AF008DF692 /* Response.swift */; };
 		2509D7432CB43A84008DF692 /* Bienvenida.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2509D7422CB43A84008DF692 /* Bienvenida.swift */; };
 		2509D7452CB43AAC008DF692 /* Paths.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2509D7442CB43AAC008DF692 /* Paths.swift */; };
+		2509D7472CB44092008DF692 /* CharacterCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2509D7462CB44092008DF692 /* CharacterCard.swift */; };
 		2560465D2CB3743800562190 /* Examen_MovilesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2560465C2CB3743800562190 /* Examen_MovilesApp.swift */; };
 		2560465F2CB3743800562190 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2560465E2CB3743800562190 /* ContentView.swift */; };
 		256046612CB3743900562190 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 256046602CB3743900562190 /* Assets.xcassets */; };
@@ -61,6 +62,7 @@
 		2509D73F2CB432AF008DF692 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		2509D7422CB43A84008DF692 /* Bienvenida.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bienvenida.swift; sourceTree = "<group>"; };
 		2509D7442CB43AAC008DF692 /* Paths.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paths.swift; sourceTree = "<group>"; };
+		2509D7462CB44092008DF692 /* CharacterCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCard.swift; sourceTree = "<group>"; };
 		256046592CB3743800562190 /* Examen Moviles.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Examen Moviles.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2560465C2CB3743800562190 /* Examen_MovilesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Examen_MovilesApp.swift; sourceTree = "<group>"; };
 		2560465E2CB3743800562190 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 				2509D7392CB38744008DF692 /* CustomButton.swift */,
 				2509D73B2CB387BF008DF692 /* TextoLimiteField.swift */,
 				2509D73D2CB387F2008DF692 /* TextoMultilineField.swift */,
+				2509D7462CB44092008DF692 /* CharacterCard.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -403,6 +406,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2509D7472CB44092008DF692 /* CharacterCard.swift in Sources */,
 				2509D73A2CB38744008DF692 /* CustomButton.swift in Sources */,
 				2560465F2CB3743800562190 /* ContentView.swift in Sources */,
 				2509D72D2CB38364008DF692 /* APIRoutes.swift in Sources */,

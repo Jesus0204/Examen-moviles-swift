@@ -9,8 +9,11 @@ import Foundation
 
 class ViewModel: ObservableObject {
     
-    // TODO: Insertar variables tipo @Published para que el View puede observar cambios
-    @Published var variable = ""
+    @Published var characters: [Character] = []
+    @Published var searchText = ""
+    @Published var currentPage = 1
+    @Published var totalPages = 1
+    @Published var isLoading = false
     
     // Llamas el requerimiento de user con sus funciones
     var getAllCharactersRequirement: GetAllCharactersRequirementProtocol
@@ -22,6 +25,46 @@ class ViewModel: ObservableObject {
     // Creas las funciones con el @MainActor para que se ejecuten en el hilo principal
     @MainActor
     func getCharacters() async {
-        let response = await getAllCharactersRequirement.getCharacters(page: 1)
+        self.isLoading = true
+        let response = await getAllCharactersRequirement.getCharacters(page: currentPage)
+        
+        if response != nil {
+            self.totalPages = response!.meta.totalPages
+            self.currentPage = response!.meta.currentPage
+            self.characters = response!.items
+        }
+        
+        self.isLoading = false
     }
+    
+    var filteredCharacters: [Character] {
+        if searchText.isEmpty {
+            return characters
+        } else {
+            return characters.filter { $0.name.lowercased().contains(searchText.lowercased()) }
+        }
+    }
+    
+    func loadNextPage() async {
+        currentPage = currentPage + 1
+        let response = await getAllCharactersRequirement.getCharacters(page: currentPage)
+        
+        if response != nil {
+            self.totalPages = response!.meta.totalPages
+            self.currentPage = response!.meta.currentPage
+            self.characters = response!.items
+        }
+    }
+    
+    func loadPreviousPage() async {
+        currentPage = currentPage - 1
+        let response = await getAllCharactersRequirement.getCharacters(page: currentPage)
+        
+        if response != nil {
+            self.totalPages = response!.meta.totalPages
+            self.currentPage = response!.meta.currentPage
+            self.characters = response!.items
+        }
+    }
+
 }

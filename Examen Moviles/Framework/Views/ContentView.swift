@@ -13,19 +13,69 @@ struct ContentView: View {
     
     @Binding var path: [Paths]
     
+    let columns = [
+        GridItem(.flexible()),
+        GridItem(.flexible()),
+        GridItem(.flexible())
+    ]
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            
+            Text("")
+            TextField("Busca por Nombre...", text: $viewModel.searchText)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .padding()
+            
+            HStack {
+                if viewModel.currentPage != 1 {
+                    Button(action: {
+                        Task {
+                            await viewModel.loadPreviousPage()
+                        }
+                    }, label: {
+                        Text("Previous")
+                            .padding()
+                            .background(.yellow)
+                            .cornerRadius(10)
+                            .foregroundColor(.white)
+                    })
+                }
+                Spacer()
+                
+                if viewModel.currentPage != viewModel.totalPages {
+                    
+                    Button(action: {
+                        Task {
+                            await viewModel.loadNextPage()
+                        }
+                    }, label: {
+                        Text("Next")
+                            .padding()
+                            .background(.yellow)
+                            .cornerRadius(10)
+                            .foregroundColor(.white)
+                    })
+                }
+            }
+            .padding(.horizontal)
+
+            
+            ScrollView {
+                LazyVGrid(columns: columns, spacing: 20) {
+                    ForEach(viewModel.filteredCharacters) { character in
+                        CharacterCard(character: character)
+                    }
+                }
+                .padding()
+            }
         }
-        .padding()
-        .onAppear{
+        .onAppear {
             Task {
                 await viewModel.getCharacters()
             }
         }
+        .navigationTitle("Personajes de Dragon Ball")
     }
 }
 

@@ -44,11 +44,11 @@ struct BienvenidaView: View {
                 }
                 .padding()
             }
-        }
-        .navigationDestination(for: Paths.self) { value in
-            switch value {
-            case .menu:
-                ContentView(path: $path)
+            .navigationDestination(for: Paths.self) { value in
+                switch value {
+                case .menu:
+                    ContentView(path: $path)
+                }
             }
         }
     }
