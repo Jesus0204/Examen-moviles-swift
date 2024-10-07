@@ -45,6 +45,7 @@ class ViewModel: ObservableObject {
         }
     }
     
+    @MainActor
     func loadNextPage() async {
         currentPage = currentPage + 1
         let response = await getAllCharactersRequirement.getCharacters(page: currentPage)
@@ -56,6 +57,7 @@ class ViewModel: ObservableObject {
         }
     }
     
+    @MainActor
     func loadPreviousPage() async {
         currentPage = currentPage - 1
         let response = await getAllCharactersRequirement.getCharacters(page: currentPage)

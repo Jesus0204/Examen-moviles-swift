@@ -12,13 +12,6 @@ struct ContentView: View {
     @StateObject var viewModel = ViewModel()
     
     @Binding var path: [Paths]
-    
-    let columns = [
-        GridItem(.flexible()),
-        GridItem(.flexible()),
-        GridItem(.flexible())
-    ]
-    
     var body: some View {
         VStack {
             
@@ -34,12 +27,13 @@ struct ContentView: View {
                             await viewModel.loadPreviousPage()
                         }
                     }, label: {
-                        Text("Previous")
-                            .padding()
-                            .background(.yellow)
-                            .cornerRadius(10)
-                            .foregroundColor(.white)
+                        Image(systemName: "arrow.backward.circle")
+                            .foregroundColor(Color(red: 247.0 / 255.0, green: 148.0 / 255.0, blue: 30.0 / 255.0))
+                            .font(.system(size: 30))
+                            
                     })
+                    .buttonStyle(PlainButtonStyle())
+                    
                 }
                 Spacer()
                 
@@ -50,24 +44,23 @@ struct ContentView: View {
                             await viewModel.loadNextPage()
                         }
                     }, label: {
-                        Text("Next")
-                            .padding()
-                            .background(.yellow)
-                            .cornerRadius(10)
-                            .foregroundColor(.white)
+                        Image(systemName: "arrow.forward.circle")
+                            .foregroundColor(Color(red: 247.0 / 255.0, green: 148.0 / 255.0, blue: 30.0 / 255.0))
+                            .font(.system(size: 30))
                     })
+                    .buttonStyle(PlainButtonStyle())
                 }
             }
             .padding(.horizontal)
 
             
             ScrollView {
-                LazyVGrid(columns: columns, spacing: 20) {
-                    ForEach(viewModel.filteredCharacters) { character in
-                        CharacterCard(character: character)
-                    }
+                ForEach(viewModel.filteredCharacters) { character in
+                    CharacterCard(character: character)
+                        .frame(maxWidth: .infinity)
+                        .padding(.horizontal)
                 }
-                .padding()
+                .padding(.horizontal)
             }
         }
         .onAppear {
