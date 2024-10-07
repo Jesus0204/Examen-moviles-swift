@@ -13,15 +13,15 @@ class ViewModel: ObservableObject {
     @Published var variable = ""
     
     // Llamas el requerimiento de user con sus funciones
-    var requirement: RequirementProtocol
+    var getAllCharactersRequirement: GetAllCharactersRequirementProtocol
         
-    init(requirement: RequirementProtocol = Requirement.shared) {
-        self.requirement = requirement
+    init(getAllCharactersRequirement: GetAllCharactersRequirementProtocol = GetAllCharactersRequirement.shared) {
+        self.getAllCharactersRequirement = getAllCharactersRequirement
     }
     
     // Creas las funciones con el @MainActor para que se ejecuten en el hilo principal
     @MainActor
-    func funcion() {
-        // TODO: Insertar llamadas a la función al requirement
+    func getCharacters() async {
+        let response = await getAllCharactersRequirement.getCharacters(page: 1)
     }
 }

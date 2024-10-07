@@ -5,15 +5,15 @@
 //  Created by Jesus Cedillo on 06/10/24.
 //
 
-protocol RequirementProtocol {
-    // TODO: Insertar las funciones del requirement
+protocol GetAllCharactersRequirementProtocol {
+    func getCharacters (page: Int) async -> Response?
 }
 
 // Creas la clase con el protocolo (pruebas unitarias)
-class Requirement: RequirementProtocol {
+class GetAllCharactersRequirement: GetAllCharactersRequirementProtocol {
     
     // Singleton para que el ViewModel acceda a la historia de usuario
-    static let shared = Requirement()
+    static let shared = GetAllCharactersRequirement()
     
     let dataRepository: Repository
     
@@ -22,6 +22,8 @@ class Requirement: RequirementProtocol {
         self.dataRepository = dataRepository
     }
     
-    // TODO: Insertar las funciones del requirement que llaman al repository
+    func getCharacters (page: Int) async -> Response? {
+        return await dataRepository.getCharacters(page: page)
+    }
 }
 

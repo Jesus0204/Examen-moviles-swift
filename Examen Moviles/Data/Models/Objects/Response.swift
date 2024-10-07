@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Character {
+struct Character: Codable {
     let id: Int
     let name: String
     let ki: String
@@ -17,10 +17,10 @@ struct Character {
     let description: String
     let image: String
     let affiliation: String
-    let deletedAt: String
+    let deletedAt: String?
 }
 
-struct Meta {
+struct Meta: Codable {
     let totalItems: Int
     let itemCount: Int
     let itemsPerPage: Int
@@ -28,14 +28,14 @@ struct Meta {
     let currentPage: Int
 }
 
-struct Links {
+struct Links: Codable {
     let first: String
     let previous: String
     let next: String
     let last: String
 }
 
-struct Response {
+struct Response: Codable {
     let items: [Character]
     let meta: Meta
     let links: Links

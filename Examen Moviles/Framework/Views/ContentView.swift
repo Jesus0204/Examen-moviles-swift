@@ -19,6 +19,11 @@ struct ContentView: View {
             Text("Hello, world!")
         }
         .padding()
+        .onAppear{
+            Task {
+                await viewModel.getCharacters()
+            }
+        }
     }
 }
 

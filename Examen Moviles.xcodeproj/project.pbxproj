@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2509D7272CB380E3008DF692 /* Requirement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2509D7262CB380DC008DF692 /* Requirement.swift */; };
+		2509D7272CB380E3008DF692 /* GetAllCharactersRequirement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2509D7262CB380DC008DF692 /* GetAllCharactersRequirement.swift */; };
 		2509D72A2CB38289008DF692 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2509D7292CB38289008DF692 /* Repository.swift */; };
 		2509D72D2CB38364008DF692 /* APIRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2509D72C2CB38364008DF692 /* APIRoutes.swift */; };
 		2509D7312CB383E5008DF692 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2509D7302CB383E5008DF692 /* APIService.swift */; };
@@ -48,7 +48,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2509D7262CB380DC008DF692 /* Requirement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requirement.swift; sourceTree = "<group>"; };
+		2509D7262CB380DC008DF692 /* GetAllCharactersRequirement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllCharactersRequirement.swift; sourceTree = "<group>"; };
 		2509D7292CB38289008DF692 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		2509D72C2CB38364008DF692 /* APIRoutes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRoutes.swift; sourceTree = "<group>"; };
 		2509D7302CB383E5008DF692 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
@@ -230,7 +230,7 @@
 		256046962CB3764100562190 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				2509D7262CB380DC008DF692 /* Requirement.swift */,
+				2509D7262CB380DC008DF692 /* GetAllCharactersRequirement.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -404,7 +404,7 @@
 				2560465F2CB3743800562190 /* ContentView.swift in Sources */,
 				2509D7372CB38652008DF692 /* CoordinatorView.swift in Sources */,
 				2509D72D2CB38364008DF692 /* APIRoutes.swift in Sources */,
-				2509D7272CB380E3008DF692 /* Requirement.swift in Sources */,
+				2509D7272CB380E3008DF692 /* GetAllCharactersRequirement.swift in Sources */,
 				2560465D2CB3743800562190 /* Examen_MovilesApp.swift in Sources */,
 				2509D7402CB432AF008DF692 /* Response.swift in Sources */,
 				2509D7312CB383E5008DF692 /* APIService.swift in Sources */,
