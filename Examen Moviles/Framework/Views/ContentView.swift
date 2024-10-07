@@ -14,9 +14,10 @@ struct ContentView: View {
     @Binding var path: [Paths]
     var body: some View {
         VStack {
-            TextField("Busca por Nombre...", text: $viewModel.searchText)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
-                .padding()
+            TextoLimiteField(placeholder: "Busca por Nombre...",
+                             text: $viewModel.searchText,
+                             maxLength: 100)
+            .padding()
             
             HStack {
                 Text("Género: ")
