@@ -11,6 +11,8 @@ struct ContentView: View {
     // Importas el viewmodel con @StateObject
     @StateObject var viewModel = ViewModel()
     
+    @Binding var path: [Paths]
+    
     var body: some View {
         VStack {
             Image(systemName: "globe")
@@ -27,6 +29,16 @@ struct ContentView: View {
     }
 }
 
-#Preview {
-    ContentView()
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        PreviewWrapper()
+    }
+
+    struct PreviewWrapper: View {
+        @State var path: [Paths] = []
+
+        var body: some View {
+            ContentView(path: $path)
+        }
+    }
 }

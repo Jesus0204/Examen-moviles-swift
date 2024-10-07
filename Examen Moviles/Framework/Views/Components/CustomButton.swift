@@ -34,5 +34,6 @@ struct CustomButton: View {
         }
         .buttonStyle(PlainButtonStyle())
         .contentShape(Rectangle())
+        .shadow(color: .yellow, radius: 5) 
     }
 }

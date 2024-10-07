@@ -11,7 +11,7 @@ import SwiftUI
 struct Examen_MovilesApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            BienvenidaView()
         }
     }
 }
