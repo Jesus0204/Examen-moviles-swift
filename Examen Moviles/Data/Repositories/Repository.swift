@@ -9,7 +9,7 @@ import Foundation
 
 // Se crea el protocolo para que lo hereden la clase o el struct (como la base)
 protocol APIProtocol {
-    // TODO: Insertar funciones que lleva el Repository
+    func getCharacters (page: Int) async -> Response?
 }
 
 // Crear nuestra clase PokemonRespository y heredar de nuestro protocolo PokemonAPIProtocol
@@ -26,5 +26,7 @@ class Repository: APIProtocol {
             self.apiService = apiService
         }
     
-    // TODO: Insertar funciones que llaman al Network (API Service) o Local Storage 
+    func getCharacters (page: Int) async -> Response? {
+        return await apiService.getCharacters(url: URL(string:"\(API.base)\(API.routes.characters)")!, page: page)
+    }
 }
