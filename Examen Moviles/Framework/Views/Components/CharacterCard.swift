@@ -33,8 +33,13 @@ struct CharacterCard: View {
             VStack(alignment: .leading, spacing: 5) {
                 Text("Ki: \(character.ki) / \(character.maxKi)")
                     .font(.subheadline)
+                
+                Spacer().frame(height: 15)
                 Text("Género: \(character.gender)")
+                Spacer().frame(height: 15)
                 Text("Afiliación: \(character.affiliation)")
+                Spacer().frame(height: 15)
+                Text("Descripción: \(character.description)")
             }
         }
         .padding()

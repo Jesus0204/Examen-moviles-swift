@@ -14,11 +14,33 @@ struct ContentView: View {
     @Binding var path: [Paths]
     var body: some View {
         VStack {
-            
-            Text("")
             TextField("Busca por Nombre...", text: $viewModel.searchText)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .padding()
+            
+            HStack {
+                Text("Género: ")
+                Picker("Género", selection: $viewModel.selectedGender) {
+                    Text("Todos").tag("")
+                    Text("Masculino").tag("Male")
+                    Text("Femenino").tag("Female")
+                        .pickerStyle(MenuPickerStyle())
+                 }
+            }
+            
+            HStack {
+                Text("Raza: ")
+                Picker("Raza", selection: $viewModel.selectedRace) {
+                    Text("Todas").tag("")
+                    Text("Humano").tag("Human")
+                    Text("Saiyan").tag("Saiyan")
+                    Text("Frieza Race").tag("Frieza Race")
+                    Text("Namekian").tag("Namekian")
+                    Text("Android").tag("Android")
+                }
+                .pickerStyle(MenuPickerStyle())
+            }
+            .padding(.bottom)
             
             HStack {
                 if viewModel.currentPage != 1 {
@@ -55,14 +77,27 @@ struct ContentView: View {
 
             
             ScrollView {
-                ForEach(viewModel.filteredCharacters) { character in
-                    CharacterCard(character: character)
-                        .frame(maxWidth: .infinity)
-                        .padding(.horizontal)
+                if viewModel.filteredCharacters.isEmpty {
+                    VStack {
+                        Text("No se encontraron personajes.")
+                            .font(.headline)
+                            .padding(.bottom, 10)
+
+                        Text("Prueba filtrando por más información.")
+                            .font(.subheadline)
+                            .foregroundColor(.gray)
+                    }
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .padding()
+                } else {
+                    ForEach(viewModel.filteredCharacters) { character in
+                        CharacterCard(character: character)
+                            .frame(maxWidth: .infinity)
+                            .padding(.horizontal)
+                    }
+                    .padding(.horizontal)
                 }
-                .padding(.horizontal)
-            }
-        }
+            }        }
         .onAppear {
             Task {
                 await viewModel.getCharacters()

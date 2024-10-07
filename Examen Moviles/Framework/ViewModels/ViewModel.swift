@@ -10,7 +10,12 @@ import Foundation
 class ViewModel: ObservableObject {
     
     @Published var characters: [Character] = []
-    @Published var searchText = ""
+    @Published var searchText: String = ""
+    @Published var selectedGender: String = ""
+    @Published var selectedAffiliation: String = ""
+    @Published var selectedRace: String = ""
+    @Published var minKi: String = ""
+    @Published var maxKi: String = ""
     @Published var currentPage = 1
     @Published var totalPages = 1
     @Published var isLoading = false
@@ -38,10 +43,27 @@ class ViewModel: ObservableObject {
     }
     
     var filteredCharacters: [Character] {
-        if searchText.isEmpty {
-            return characters
-        } else {
-            return characters.filter { $0.name.lowercased().contains(searchText.lowercased()) }
+        characters.filter { character in
+            // Filtrado por nombre
+            let matchesSearchText = searchText.isEmpty || character.name.lowercased().contains(searchText.lowercased())
+            
+            // Filtrado por género
+            let matchesGender = selectedGender.isEmpty || character.gender.lowercased() == selectedGender.lowercased()
+            
+            // Filtrado por afiliación
+            let matchesAffiliation = selectedAffiliation.isEmpty || character.affiliation.lowercased() == selectedAffiliation.lowercased()
+            
+            // Filtrado por raza
+            let matchesRace = selectedRace.isEmpty || character.race.lowercased() == selectedRace.lowercased()
+            
+            // Filtrado por Ki
+            let characterKi = Int(character.ki) ?? 0
+            let characterMaxKi = Int(character.maxKi) ?? 0
+            let minKiValue = Int(minKi) ?? 0
+            let maxKiValue = Int(maxKi) ?? Int.max
+            let matchesKi = characterKi >= minKiValue && characterMaxKi <= maxKiValue
+
+            return matchesSearchText && matchesGender && matchesAffiliation && matchesRace && matchesKi
         }
     }
     
