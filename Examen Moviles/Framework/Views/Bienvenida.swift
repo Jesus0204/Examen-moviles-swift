@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SDWebImageSwiftUI
 
 struct BienvenidaView: View {
     @State private var path: [Paths] = []
@@ -15,11 +16,21 @@ struct BienvenidaView: View {
             ScrollView {
                 VStack {
                     
+                    Image("Logo")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 200, height: 200, alignment: .center)
+                    
+                    Spacer().frame(height: 40)
                     
                     Text("¡Bienvenido!")
                         .font(.title)
                     
+                    Spacer().frame(height: 40)
+                    
                     Text("¡Aquí podrás descrubir a todos los personajes de DragonBall!")
+                    
+                    Spacer().frame(height: 40)
                     
                     CustomButton(
                         text: "¡Entra!",
