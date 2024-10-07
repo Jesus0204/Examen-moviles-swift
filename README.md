@@ -7,5 +7,5 @@ La estructura del proyecto es la siguiente. Se usa MVVM con CLEAN Architecture p
 ![MER - Página 6](https://github.com/user-attachments/assets/e89350ee-d86c-433f-9ac7-acbae96b727c)
 
 ## Documentación
-De igual forma se sigió el estándar propuesto por el equipo para los commits y para la creación de variables. Este estándar se puede consultar en: 
+De igual forma se siguió el estándar propuesto por el equipo para los commits y para la creación de variables. Este estándar se puede consultar en: 
 https://docs.google.com/document/d/1cS69wJCCJTWT4Wfpnz2EZyazJxfeclUUGJpCXzQA2dM/edit#heading=h.b8srr1fld0on 
