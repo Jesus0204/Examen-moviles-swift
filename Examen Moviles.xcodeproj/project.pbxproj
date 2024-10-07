@@ -11,11 +11,9 @@
 		2509D72A2CB38289008DF692 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2509D7292CB38289008DF692 /* Repository.swift */; };
 		2509D72D2CB38364008DF692 /* APIRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2509D72C2CB38364008DF692 /* APIRoutes.swift */; };
 		2509D7312CB383E5008DF692 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2509D7302CB383E5008DF692 /* APIService.swift */; };
-		2509D7332CB38492008DF692 /* LocalService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2509D7322CB38488008DF692 /* LocalService.swift */; };
 		2509D7352CB3851B008DF692 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2509D7342CB3851B008DF692 /* ViewModel.swift */; };
 		2509D73A2CB38744008DF692 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2509D7392CB38744008DF692 /* CustomButton.swift */; };
 		2509D73C2CB387BF008DF692 /* TextoLimiteField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2509D73B2CB387BF008DF692 /* TextoLimiteField.swift */; };
-		2509D73E2CB387F2008DF692 /* TextoMultilineField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2509D73D2CB387F2008DF692 /* TextoMultilineField.swift */; };
 		2509D7402CB432AF008DF692 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2509D73F2CB432AF008DF692 /* Response.swift */; };
 		2509D7432CB43A84008DF692 /* Bienvenida.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2509D7422CB43A84008DF692 /* Bienvenida.swift */; };
 		2509D7452CB43AAC008DF692 /* Paths.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2509D7442CB43AAC008DF692 /* Paths.swift */; };
@@ -54,11 +52,9 @@
 		2509D7292CB38289008DF692 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		2509D72C2CB38364008DF692 /* APIRoutes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRoutes.swift; sourceTree = "<group>"; };
 		2509D7302CB383E5008DF692 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
-		2509D7322CB38488008DF692 /* LocalService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalService.swift; sourceTree = "<group>"; };
 		2509D7342CB3851B008DF692 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		2509D7392CB38744008DF692 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		2509D73B2CB387BF008DF692 /* TextoLimiteField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextoLimiteField.swift; sourceTree = "<group>"; };
-		2509D73D2CB387F2008DF692 /* TextoMultilineField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextoMultilineField.swift; sourceTree = "<group>"; };
 		2509D73F2CB432AF008DF692 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		2509D7422CB43A84008DF692 /* Bienvenida.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bienvenida.swift; sourceTree = "<group>"; };
 		2509D7442CB43AAC008DF692 /* Paths.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paths.swift; sourceTree = "<group>"; };
@@ -129,20 +125,11 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
-		2509D72F2CB383AC008DF692 /* Local */ = {
-			isa = PBXGroup;
-			children = (
-				2509D7322CB38488008DF692 /* LocalService.swift */,
-			);
-			path = Local;
-			sourceTree = "<group>";
-		};
 		2509D7382CB38730008DF692 /* Components */ = {
 			isa = PBXGroup;
 			children = (
 				2509D7392CB38744008DF692 /* CustomButton.swift */,
 				2509D73B2CB387BF008DF692 /* TextoLimiteField.swift */,
-				2509D73D2CB387F2008DF692 /* TextoMultilineField.swift */,
 				2509D7462CB44092008DF692 /* CharacterCard.swift */,
 			);
 			path = Components;
@@ -255,7 +242,6 @@
 			children = (
 				2509D72B2CB38351008DF692 /* Objects */,
 				2509D72E2CB38391008DF692 /* Network */,
-				2509D72F2CB383AC008DF692 /* Local */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -415,12 +401,10 @@
 				2509D7452CB43AAC008DF692 /* Paths.swift in Sources */,
 				2509D7402CB432AF008DF692 /* Response.swift in Sources */,
 				2509D7312CB383E5008DF692 /* APIService.swift in Sources */,
-				2509D7332CB38492008DF692 /* LocalService.swift in Sources */,
 				2509D7352CB3851B008DF692 /* ViewModel.swift in Sources */,
 				2509D72A2CB38289008DF692 /* Repository.swift in Sources */,
 				2509D73C2CB387BF008DF692 /* TextoLimiteField.swift in Sources */,
 				2509D7432CB43A84008DF692 /* Bienvenida.swift in Sources */,
-				2509D73E2CB387F2008DF692 /* TextoMultilineField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
